@@ -8,7 +8,6 @@ function Calendar() {
   const year = currentDate.getFullYear();
   const month = currentDate.getMonth();
 
-  // Get first and last days
   const firstDay = new Date(year, month, 1).getDay();
   const daysInMonth = new Date(year, month + 1, 0).getDate();
 
@@ -22,12 +21,10 @@ function Calendar() {
 
   const dates = [];
 
-  // Fill empty cells before first day
   for (let i = 0; i < firstDay; i++) {
     dates.push(null);
   }
 
-  // Fill dates
   for (let i = 1; i <= daysInMonth; i++) {
     dates.push(i);
   }
